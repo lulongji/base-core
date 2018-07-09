@@ -8,6 +8,13 @@
     <name>base-core</name>
     <url>http://blog.lulongji.cn</url>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.3.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,9 +27,12 @@
         <redis.version>1.7.5.RELEASE</redis.version>
         <jedis.version>2.9.0</jedis.version>
         <log4j2.version>2.0.2</log4j2.version>
+        <spring.version>5.0.7.RELEASE</spring.version>
+        <shiro.version>1.2.4</shiro.version>
     </properties>
 
     <dependencies>
+
 
         <!-- commons -->
         <dependency>
@@ -139,6 +149,35 @@
             <type>jar</type>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!-- shiro start -->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-core</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-web</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <!-- shiro end -->
+
+        <!-- 添加freemarker依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
 
     </dependencies>
 
